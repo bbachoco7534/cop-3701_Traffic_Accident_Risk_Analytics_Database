@@ -22,4 +22,7 @@ https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
 
 https://www-fars.nhtsa.dot.gov/States/StatesCrashesAndAllVictims.aspx
 
+## Database Application
+This project will be completed using Oracle Database along with the DataGrip application.
+
 
