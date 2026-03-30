@@ -25,4 +25,8 @@ https://www-fars.nhtsa.dot.gov/States/StatesCrashesAndAllVictims.aspx
 ## Database Application
 This project will be completed using Oracle Database along with the DataGrip application.
 
+## Final ER Diagram
+
+<img width="1213" height="652" alt="finalERdiagram" src="https://github.com/user-attachments/assets/82cb8b44-8df7-43c1-b3f7-8f895a7c8068" />
+
 
