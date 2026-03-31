@@ -1,6 +1,6 @@
 # Database ER Diagram
 
-![Transportation Safety ER Diagram](er_diagram.png)
+<img width="1213" height="652" alt="finalERdiagram" src="https://github.com/user-attachments/assets/82cb8b44-8df7-43c1-b3f7-8f895a7c8068" />
 
 ## Overview
 
