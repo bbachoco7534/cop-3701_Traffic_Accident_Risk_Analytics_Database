@@ -1,0 +1,6 @@
+weather_id,condition_type
+1,Clear
+2,Rain
+3,Fog
+4,Snow
+5,Cloudy
