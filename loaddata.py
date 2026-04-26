@@ -29,19 +29,19 @@ def main():
         print("Starting data load...")
 
         # Location
-        load_csv(cursor, "location.csv", "Location",
+        load_csv(cursor, "data/location.csv", "Location",
                  "INSERT INTO Location (location_id, latitude, longitude) VALUES (:1, :2, :3)")
 
         # Weather
-        load_csv(cursor, "weather.csv", "Weather_Condition",
+        load_csv(cursor, "data/weather.csv", "Weather_Condition",
                  "INSERT INTO Weather_Condition (weather_id, condition_type) VALUES (:1, :2)")
 
         # Vehicle
-        load_csv(cursor, "vehicle.csv", "Vehicle",
+        load_csv(cursor, "data/vehicle.csv", "Vehicle",
                  "INSERT INTO Vehicle (vehicle_id, vehicle_type) VALUES (:1, :2)")
 
         # Accident (FIXED DATE/TIME FORMAT)
-        load_csv(cursor, "accident.csv", "Accident",
+        load_csv(cursor, "data/accident.csv", "Accident",
                  """
                  INSERT INTO Accident (
                      accident_id, accident_date, accident_time,
@@ -56,12 +56,17 @@ def main():
                  """)
 
         # Accident_Vehicle
-        load_csv(cursor, "accident_vehicle.csv", "Accident_Vehicle",
+        load_csv(cursor, "data/accident_vehicle.csv", "Accident_Vehicle",
                  "INSERT INTO Accident_Vehicle (accident_id, vehicle_id) VALUES (:1, :2)")
 
         # Accident_Report (timestamp handled automatically)
-        load_csv(cursor, "report.csv", "Accident_Report",
-                 "INSERT INTO Accident_Report (accident_id, report_timestamp) VALUES (:1, :2)")
+        load_csv(
+            cursor,
+            "data/report.csv",
+            "Accident_Report",
+            """INSERT INTO Accident_Report (accident_id, report_timestamp)
+               VALUES (:1, TO_TIMESTAMP(:2, 'YYYY-MM-DD HH24:MI:SS.FF6'))"""
+        )
 
         # Commit everything once
         conn.commit()

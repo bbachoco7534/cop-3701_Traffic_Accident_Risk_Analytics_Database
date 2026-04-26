@@ -23,7 +23,7 @@ CREATE TABLE Weather_Condition (
 CREATE TABLE Accident (
     accident_id INT PRIMARY KEY,
     accident_date DATE,
-    accident_time TIME,
+    accident_time TIMESTAMP,
     severity_level INT,
     location_id INT,
     weather_id INT,
@@ -49,6 +49,6 @@ CREATE TABLE Accident_Vehicle (
 -- Accident Report
 CREATE TABLE Accident_Report (
     accident_id INT PRIMARY KEY,
-    report_timestamp DATETIME,
+    report_timestamp TIMESTAMP,
     FOREIGN KEY (accident_id) REFERENCES Accident(accident_id)
 );

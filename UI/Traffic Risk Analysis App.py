@@ -3,7 +3,7 @@ import streamlit as st
 from pathlib import Path
 
 # --- DATABASE SETUP ---
-LIB_DIR = bytes(Path(__file__).parent.parent.joinpath("instantclient-basiclite-windows.x64-23.26.1.0.0","instantclient_23_0"))
+LIB_DIR = r"C:\Users\Brandon\Downloads\instantclient-basiclite-windows.x64-23.26.1.0.0\instantclient_23_0"
 
 # * Replace with user, pass, and dsn of the actual database
 DB_USER = "Traffic_Accident_Risk_analysis"
